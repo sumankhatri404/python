@@ -648,19 +648,18 @@
 # print(list(sorted(my_list.keys())))
 
 
-
-#Python Dictionary Comprehension
+# Python Dictionary Comprehension
 #
 # square={x:x*x for x in range(6)}
 # print(square)
-
 
 
 # squares={x:x*x for x in range(10) if(x%2==1)}
 # print(squares)
 from pprint import pprint
 
-squares={1:2,3:4,9:6,7:8}
+squares = {1: 2, 3: 4, 9: 6, 7: 8}
+
 
 # print('1' in squares)
 # print('2' not in squares)
@@ -675,7 +674,7 @@ squares={1:2,3:4,9:6,7:8}
 # print(list(sorted(squares)))2
 
 
-#Opening Files in Python
+# Opening Files in Python
 #
 # with open("text.txt",mode='a+') as f:
 #
@@ -688,7 +687,7 @@ squares={1:2,3:4,9:6,7:8}
 #     print(f.tell())
 
 
-#read a file line-by-line using a for loop.
+# read a file line-by-line using a for loop.
 
 #
 # with open("text.txt",'r') as f:
@@ -696,7 +695,7 @@ squares={1:2,3:4,9:6,7:8}
 #         print(line,end='')
 
 
-#readline()
+# readline()
 # with open("text.txt",'r') as f:
 #     print(f.readline())
 #     print(f.fileno())
@@ -705,7 +704,7 @@ squares={1:2,3:4,9:6,7:8}
 #     print(f.writelines(["hello  i am using python"]))
 
 
-#docstring
+# docstring
 #
 # def func():
 #     '''hello man'''
@@ -713,30 +712,27 @@ squares={1:2,3:4,9:6,7:8}
 # print(func.__doc__)
 
 
-
-#directory
+# directory
 
 # import os
 # print(os.getcwd())
 # print(os.getcwdb())
 
 
-
-#changing directory
+# changing directory
 # import  os
 # print(os.getcwd())
 # os.chdir('C:\\Users\sumit\OneDrive\Desktop')
 # print(os.getcwd())
 
 
-#list directory
+# list directory
 # import os
 # print(os.listdir('C:\\'))
 # print(os.listdir())
 
 
-
-#Making a New Directory
+# Making a New Directory
 
 # import os
 # print(os.mkdir('suman'))
@@ -749,16 +745,16 @@ squares={1:2,3:4,9:6,7:8}
 # print(os.listdir())
 
 
-#Removing Directory or File
+# Removing Directory or File
 
-#import os
-#print(os.listdir())
-#print(os.rmdir('hp'))
-#print(os.remove('text.txt'))
-#print(os.listdir())
+# import os
+# print(os.listdir())
+# print(os.rmdir('hp'))
+# print(os.remove('text.txt'))
+# print(os.listdir())
 
 
-#In order to remove a non-empty directory, we can use the rmtree() method inside the shutil module.
+# In order to remove a non-empty directory, we can use the rmtree() method inside the shutil module.
 # import os
 # import shutil
 # os.mkdir('suman')
@@ -778,7 +774,7 @@ squares={1:2,3:4,9:6,7:8}
 # print(dir(locals()['__builtins__']))
 
 
-#Catching Exceptions in Python
+# Catching Exceptions in Python
 
 # import sys
 # randsys=['a',0,2]
@@ -794,8 +790,7 @@ squares={1:2,3:4,9:6,7:8}
 # print("the entry ",n,"is",r)
 
 
-
-#print the name of the exception using the exc_info()
+# print the name of the exception using the exc_info()
 
 # import sys
 # randomsys=['a',1,2]
@@ -809,7 +804,7 @@ squares={1:2,3:4,9:6,7:8}
 # print("the reciprocal of ",n, "is",r)
 
 
-#Raising Exceptions in Python
+# Raising Exceptions in Python
 
 # try:
 #     a=int(input("enter a number "))
@@ -819,7 +814,7 @@ squares={1:2,3:4,9:6,7:8}
 #     print(ve)
 
 
-#Python try with else clause
+# Python try with else clause
 #
 # try:
 #     num = int(input("enter a number"))
@@ -832,7 +827,7 @@ squares={1:2,3:4,9:6,7:8}
 #     print(rec)
 
 
-#Python try...finally
+# Python try...finally
 #
 # try:
 #     f=open("text.txt","r")
@@ -844,7 +839,7 @@ squares={1:2,3:4,9:6,7:8}
 #     f.close()
 
 
-#User-Defined Exception in Python
+# User-Defined Exception in Python
 
 # class Error(Exception):
 #     pass
@@ -876,13 +871,7 @@ squares={1:2,3:4,9:6,7:8}
 # print("congratulation the guess is true")
 
 
-
-
-
-
-
-
-#Customizing Exception Classes
+# Customizing Exception Classes
 #
 # class SalaryNotInRange(Exception):
 #
@@ -897,10 +886,7 @@ squares={1:2,3:4,9:6,7:8}
 #     raise SalaryNotInRange(salary)
 
 
-
-
-
-#class
+# class
 
 # class parrot:
 #     species="bird"
@@ -914,25 +900,59 @@ squares={1:2,3:4,9:6,7:8}
 # print(obj1.__class__.species)
 
 
-
-#Creating Methods in Python
-
+# Creating Methods in Python
 
 
-class parrot:
+#
+# class parrot:
+#
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#
+#     def sing(self,song):
+#         return "{} sings a {}".format(self.name,song)
+#
+#     def dance(self):
+#         return "{} is now dancing".format(self.name)
+#
+#
+# obj1= parrot("sandy",1)
+# print(obj1.name)
+# print(obj1.age)
+# print(obj1.sing("happy"))
 
-    def __init__(self,name,age):
-        self.name=name
-        self.age=age
 
-    def sing(self,song):
-        return "{} sings a {}".format(self.name,song)
+# python inheritance
+#
+#
+# class bird:
+#     def __int__(self):
+#         print("bird is ready")
+#
+#     def whoisthis(self):
+#         print("bird")
+#
+#     def swim(self):
+#         print("swim faster")
+#
+#
+# class pengiun(bird):
+#     def __init__(self):
+#         super().__init__()
+#         print("pengiun is ready")
+#
+#     def whoisthis(self):
+#         super().whoisthis()
+#         print("pengiun")
+#
+#     def run(self):
+#         print("run faster")
+#
+#
+# obj1 = pengiun()
+#
+# obj1.whoisthis()
+# obj1.run()
+# obj1.swim()
 
-    def dance(self):
-        return "{} is now dancing".format(self.name)
-
-
-obj1= parrot("sandy",1)
-print(obj1.name)
-print(obj1.age)
-print(obj1.sing("happy"))
